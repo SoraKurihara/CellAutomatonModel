@@ -16,6 +16,21 @@ Clone the repository using the following command:
 git clone https://github.com/SoraKurihara/CellAutomatonModel.git
 ```
 
+## Usage
+```
+Rule = 90
+L = 101
+
+# X       = np.random.choice([0,1], size=L)
+X = np.zeros(L)
+X[int(L / 2)] = 1
+
+# CA = CellAutomatonModel(Rule, Boundary="Fix")
+CA = CellAutomatonModel(Rule, Boundary="Periodic")
+Cells = CA.CA(X, 101)
+CA.print(Cells)
+CA.plot(Cells, DIR="01_Simulation/Output/")
+```
 
 # Author
 

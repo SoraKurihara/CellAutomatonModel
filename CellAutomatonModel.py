@@ -82,18 +82,3 @@ class CellAutomatonModel:
         plt.ylabel("Time")
         plt.savefig(DIR + f"Rule{self.Rule}_Spatio.png", dpi=300)
         plt.show()
-
-
-if __name__ == "__main__":
-    Rule = 90
-    L = 101
-
-    # X       = np.random.choice([0,1], size=L)
-    X = np.zeros(L)
-    X[int(L / 2)] = 1
-
-    # CA = CellAutomatonModel(Rule, Boundary="Fix")
-    CA = CellAutomatonModel(Rule, Boundary="Periodic")
-    Cells = CA.CA(X, 101)
-    CA.print(Cells)
-    CA.plot(Cells, DIR="01_Simulation/Output/")
