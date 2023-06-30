@@ -14,7 +14,7 @@ Clone the repository using the following command:
 
 ```bash
 git clone https://github.com/SoraKurihara/CellAutomatonModel.git
-
+```
 
 
 # Author
